@@ -58,10 +58,10 @@ const HeroLeft = () => {
       </div>
       <div className="text-center lg:text-left">
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-          Edit Beach Volleyball footage with AI
+          The Sydney Soloists
         </h1>
         <p className="mt-6 text-lg leading-8 text-gray-600">
-          Cutshot automatically identifies Digs, Sets and Spikes in 1080p video, allowing you to quickly create montages of your gameplay on your phone and get feedback to play better, faster.
+          playing masterpieces from the chamber music literature of the 18th, 19th and 20th century
         </p>
         <div className="mt-10 flex items-center justify-center lg:justify-start gap-x-6">
           <a

@@ -1,23 +1,38 @@
 const persons = [
   { 
-    name: 'Tobias Breider', 
-    instrument: 'Violin' ,
-    image: 'https://www.sydneymozartsociety.com.au/media/42318/5_ss_tobias_brieder.jpg'
+    name: 'Frank Celata', 
+    instrument: 'Clarinet' ,
+    image: 'https://www.sydneymozartsociety.com.au/media/42298/5_ss_frank_celata.jpg'
   },
   { 
     name: 'Tobias Breider', 
     instrument: 'Violin' ,
     image: 'https://www.sydneymozartsociety.com.au/media/42318/5_ss_tobias_brieder.jpg'
   },
+  // { 
+  //   name: 'Daniel Herscovitch', 
+  //   instrument: 'Piano' ,
+  //   image: 'https://www.sydneymozartsociety.com.au/media/46777/5_ss_daniel_h_biography.jpg'
+  // },
   { 
-    name: 'Tobias Breider', 
+    name: 'Andrew Haveron', 
     instrument: 'Violin' ,
-    image: 'https://www.sydneymozartsociety.com.au/media/42318/5_ss_tobias_brieder.jpg'
+    image: 'https://www.sydneymozartsociety.com.au/media/42308/5_ss_andrew_haveron.jpg'
   },
   { 
-    name: 'Tobias Breider', 
-    instrument: 'Violin' ,
-    image: 'https://www.sydneymozartsociety.com.au/media/42318/5_ss_tobias_brieder.jpg'
+    name: 'Umberto Clerici', 
+    instrument: 'Cello' ,
+    image: 'https://www.sydneymozartsociety.com.au/media/42313/5_ss_umberto_clerici.jpg'
+  },
+  { 
+    name: 'Robert Johnson', 
+    instrument: 'Horn' ,
+    image: 'https://www.sydneymozartsociety.com.au/media/46772/robert-johnson-photo-credit-keith-saunders.jpg'
+  },
+  { 
+    name: 'Frank Celata', 
+    instrument: 'Clarinet' ,
+    image: 'https://www.sydneymozartsociety.com.au/media/42298/5_ss_frank_celata.jpg'
   },
 ]
 
@@ -25,7 +40,7 @@ export default function Musicians() {
   return (
     <div id="about-us" className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 flex justify-center">
-        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto">
           {
             persons.map(p => Person({person: p}))
           }
@@ -38,10 +53,10 @@ export default function Musicians() {
 function Person({person}: any) {
   return (
     <li className="flex flex-col items-center py-10 px-8 rounded-2xl bg-gray-800 hover:bg-violet-700 cursor-pointer">
-      <div className="relative w-56 h-56 rounded-full overflow-hidden">
-        <img className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" src={person.image} alt="" />
+      <div className="relative w-56 h-56 rounded-full overflow-hidden bg-white">
+        <img className="absolute left-1/2 top-2/3 -translate-x-1/2 -translate-y-1/2" src={person.image} alt="" />
       </div>
-      <h3 className="text-center text-base leading-7 tracking-tight font-semibold mt-6">{person.name}</h3>
+      <h3 className="text-center text-base text-white leading-7 tracking-tight font-semibold mt-6">{person.name}</h3>
       <p className="text-center text-sm leading-6 text-gray-400">{person.instrument}</p>
       <ul className="grid grid-cols-2 gap-6 mt-6 text-gray-400">
         <li className="cursor-pointer">
