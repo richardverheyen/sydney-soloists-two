@@ -1,82 +1,59 @@
-import Image from 'next/image'
+import Image from "next/image";
 
 const Hero = () => {
   return (
     <div className="bg-cream">
       <div className="relative isolate px-6 pt-14 lg:px-8">
-        <div
-          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-          aria-hidden="true"
-        >
-          <div
-            className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-            style={{
-              clipPath:
-                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-            }}
-          />
-        </div>
+        <iframe
+          className="absolute opacity-20 inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
+          src="https://www.youtube.com/embed/CYjmnWrJa6s?si=ucFPcp2zTlPlyJ34?mute=1&amp;autoplay=1&amp;controls=0&amp;start=144"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        ></iframe>
+
         <div className="lg:flex">
-            <HeroLeft />
-            <div className="m-auto w-[300px]"></div>
-            {/* <Image
-                className="m-auto"
-                src="/app-example.png"
-                width={300}
-                height={620}
-                alt="App example"
-                /> */}
-        </div>
-        <div
-          className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-          aria-hidden="true"
-        >
-          <div
-            className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-            style={{    
-              clipPath:
-                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-            }}
-          />
+          <HeroLeft />
+          <div className="m-auto w-[260px]"></div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 const HeroLeft = () => {
   return (
-    <section className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-      <div className="hidden sm:mb-8 lg:flex">
-        <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+    <section className="mx-auto max-w-4xl py-32 sm:py-48 lg:py-56">
+      {/* <div className="hidden sm:mb-8 lg:flex">
+        <div className="relative rounded-full px-3 py-1 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
           Currently in Pre-Alpha testing phase.{" "}
           <a href="#" className="font-semibold text-indigo-600">
             <span className="absolute inset-0" aria-hidden="true" />
             Read more <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
-      </div>
+      </div> */}
       <div className="text-center lg:text-left">
-        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+        <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
           The Sydney Soloists
         </h1>
-        <p className="mt-6 text-lg leading-8 text-gray-600">
-          playing masterpieces from the chamber music literature of the 18th, 19th and 20th century
+        <p className="mt-6 text-lg leading-8">
+          playing masterpieces from the chamber music literature of the 18th,
+          19th and 20th&nbsp;century
         </p>
         <div className="mt-10 flex items-center justify-center lg:justify-start gap-x-6">
           <a
-            href="#"
-            className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            href="#recordings"
+            className="rounded-md text-white bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
-            Download the App
+            Get in touch
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Learn more <span aria-hidden="true">→</span>
+          <a href="#" className="text-sm font-semibold leading-6">
+            Listen to our work <span aria-hidden="true">→</span>
           </a>
         </div>
       </div>
     </section>
   );
-}
+};
 
-export default Hero
+export default Hero;

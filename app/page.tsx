@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import About from "./About";
 import Musicians from "./Musicians";
 import Testimonials from "./Testimonials";
+import Recordings from "./Recordings";
 import Contact from "./Contact";
 
 const IndexPage = () =>  {
@@ -12,6 +13,7 @@ const IndexPage = () =>  {
       <Hero />
       <About />
       <Musicians />
+      <Recordings />
       <Testimonials />
       <Contact />
     </main>

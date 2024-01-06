@@ -7,18 +7,14 @@ const links = [
   const stats = [
     { name: 'Musicians in collective', value: '11+' },
     { name: 'To Australia\'s best talent', value: 'Access' },
-    { name: 'Add feature here', value: '??' },
+    // { name: 'Add feature here', value: '??' },
     { name: 'Genres and arrangements', value: 'Limitless' },
   ]
   
   export default function Example() {
     return (
-      <div id="about-us" className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
-        <img
-          src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
-          className="opacity-20 absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
-        />
+      <div id="about-us" className="relative isolate overflow-hidden py-24 sm:py-32">
+        
         <div
           className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
           aria-hidden="true"
@@ -45,25 +41,25 @@ const links = [
         </div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">About us</h2>
-            <p className="mt-6 text-lg leading-8 text-gray-300">
+            <h2 className="text-3xl sm:text-5xl font-bold tracking-tight">About us</h2>
+            <p className="mt-6 text-lg leading-8">
               Sydney Soloists is a chamber group comprising of Principal players and guests from the Sydney Symphony Orchestra. 
               They perform masterpieces of the chamber music literature from the 18th Century to the music of&nbsp;today.
             </p>
           </div>
           <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-            <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
+            {/* <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
               {links.map((link) => (
                 <a key={link.name} href={link.href}>
                   {link.name} <span aria-hidden="true">&rarr;</span>
                 </a>
               ))}
-            </div>
+            </div> */}
             <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
               {stats.map((stat) => (
                 <div key={stat.name} className="flex flex-col-reverse">
-                  <dt className="text-base leading-7 text-gray-300">{stat.name}</dt>
-                  <dd className="text-2xl font-bold leading-9 tracking-tight text-white">{stat.value}</dd>
+                  <dt className="text-base leading-7">{stat.name}</dt>
+                  <dd className="text-2xl font-bold leading-9 tracking-tight">{stat.value}</dd>
                 </div>
               ))}
             </dl>
