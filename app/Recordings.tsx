@@ -32,7 +32,7 @@ export default function Example() {
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
           <dl className="grid grid-cols-2 gap-x-4 gap-y-6 lg:grid-cols-4 lg:gap-y-8">
             {features.map((feature) => (
-              <div className='flex flex-col items-center'>
+              <div key={feature.url} className='flex flex-col items-center'>
                 <ReactPlayer
                   className="!w-full !h-32"
                   url={feature.url}
