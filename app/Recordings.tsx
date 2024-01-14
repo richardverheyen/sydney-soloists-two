@@ -1,22 +1,24 @@
 "use client"
-import ReactPlayer from "react-player"
+import dynamic from 'next/dynamic'
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
-const features = [
-  {
-    url: "https://soundcloud.com/sydney-symphony/beethoven-symphony-no9-choral-4-allegro-assai-choral-finale-on-schillers-ode-to-joy"
-  },
-  {
-    url: "https://soundcloud.com/sydney-symphony/dvorak-symphony-no9-new-world-4th-movement-allegro-con-fuoco"
-  },
-  {
-    url: "https://soundcloud.com/sydney-symphony/dvorak-symphony-no9-new-world-2nd-movement-largo"
-  },
-  {
-    url: "https://soundcloud.com/sydney-symphony/sets/verdis-requiem"
-  },
-]
+export default function Recordings() {
 
-export default function Example() {
+  const features = [
+    {
+      url: "https://soundcloud.com/sydney-symphony/beethoven-symphony-no9-choral-4-allegro-assai-choral-finale-on-schillers-ode-to-joy"
+    },
+    {
+      url: "https://soundcloud.com/sydney-symphony/dvorak-symphony-no9-new-world-4th-movement-allegro-con-fuoco"
+    },
+    {
+      url: "https://soundcloud.com/sydney-symphony/dvorak-symphony-no9-new-world-2nd-movement-largo"
+    },
+    {
+      url: "https://soundcloud.com/sydney-symphony/sets/verdis-requiem"
+    },
+  ]
+
   return (
     <div className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -30,7 +32,7 @@ export default function Example() {
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-          <dl className="grid grid-cols-2 gap-x-4 gap-y-6 lg:grid-cols-4 lg:gap-y-8">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-6">
             {features.map((feature) => (
               <div key={feature.url} className='flex flex-col items-center'>
                 <ReactPlayer
@@ -39,7 +41,7 @@ export default function Example() {
                 />
               </div>
             ))}
-          </dl>
+          </div>
         </div>
       </div>
     </div>

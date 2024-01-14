@@ -1,16 +1,23 @@
-import Image from "next/image";
+
+"use client";
+import dynamic from 'next/dynamic'
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 const Hero = () => {
+  let videosrc = "/orchestra-example.mp4";
+
   return (
     <div className="bg-cream">
-      <div className="relative isolate px-6 pt-14 lg:px-8">
-        <iframe
-          className="absolute opacity-20 inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
-          src="https://www.youtube.com/embed/CYjmnWrJa6s?si=ucFPcp2zTlPlyJ34?mute=1&amp;autoplay=1&amp;controls=0&amp;start=144"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        ></iframe>
-
+      <div className="relative isolate px-6 pt-14 lg:px-8 overflow-hidden">
+        <ReactPlayer
+          url={videosrc}
+          className="absolute opacity-20 -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 !min-w-full !min-h-full !h-full !w-[200%] desktop:!h-[200%] desktop:!w-full desktop:opacity-80 max-xl:w-[1280px]"
+          light={false}
+          muted={true}
+          loop={true}
+          playing={true}
+        />
+      
         <div className="lg:flex">
           <HeroLeft />
           <div className="m-auto w-[260px]"></div>
