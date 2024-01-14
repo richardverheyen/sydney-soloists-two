@@ -3,6 +3,22 @@
 import dynamic from 'next/dynamic'
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
+const scrollToContact = (e: any) => {
+  e.preventDefault();
+  window.scrollTo({
+    top: document.getElementById("contact").offsetTop - 60,
+    behavior: 'smooth',
+  });
+};
+
+const scrollToRecordings = (e: any) => {
+  e.preventDefault();
+  window.scrollTo({
+    top: document.getElementById("recordings").offsetTop - 60,
+    behavior: 'smooth',
+  });
+};
+
 const Hero = () => {
   let videosrc = "/orchestra-example.mp4";
 
@@ -50,12 +66,13 @@ const HeroLeft = () => {
         </p>
         <div className="mt-10 flex items-center justify-center lg:justify-start gap-x-6">
           <a
-            href="#recordings"
+            href="#"
+            onClick={scrollToContact} 
             className="rounded-md text-white bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
             Get in touch
           </a>
-          <a href="#" className="text-sm font-semibold leading-6">
+          <a href="#" onClick={scrollToRecordings} className="text-sm font-semibold leading-6">
             Listen to our work <span aria-hidden="true">→</span>
           </a>
         </div>
