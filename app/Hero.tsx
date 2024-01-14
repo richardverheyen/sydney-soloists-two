@@ -33,7 +33,7 @@ const Hero = () => {
       <div className="relative isolate px-6 pt-14 lg:px-8 overflow-hidden">
         <ReactPlayer
           url={videosrc}
-          className="absolute opacity-20 -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 !min-w-full !min-h-full !h-full !w-[400%] desktop:!h-[200%] desktop:!w-full max-xl:w-[1280px]"
+          className="absolute opacity-20 -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 !min-w-full !min-h-full !h-full !w-[400%] desktop:!w-full desktop:!h-[200%] max:!w-[1440px] max:!h-[810px]"
           light={false}
           muted={true}
           loop={true}
@@ -41,7 +41,7 @@ const Hero = () => {
           playsinline={true}
         />
       
-        <div className="lg:flex">
+        <div className="lg:flex max-w-7xl mx-auto">
           <HeroLeft />
           <div className="m-auto w-[260px]"></div>
         </div>
