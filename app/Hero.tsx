@@ -16,6 +16,7 @@ const Hero = () => {
           muted={true}
           loop={true}
           playing={true}
+          playsinline={true}
         />
       
         <div className="lg:flex">
