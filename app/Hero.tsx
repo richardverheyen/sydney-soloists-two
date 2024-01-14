@@ -5,18 +5,24 @@ const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 const scrollToContact = (e: any) => {
   e.preventDefault();
-  window.scrollTo({
-    top: document.getElementById("contact").offsetTop - 60,
-    behavior: 'smooth',
-  });
+  const contactElement = document.getElementById("contact");
+  if (contactElement) {
+    window.scrollTo({
+      top: contactElement.offsetTop - 60,
+      behavior: 'smooth',
+    });
+  }
 };
 
 const scrollToRecordings = (e: any) => {
   e.preventDefault();
-  window.scrollTo({
-    top: document.getElementById("recordings").offsetTop - 60,
-    behavior: 'smooth',
-  });
+  const recordingsElement = document.getElementById("recordings");
+  if (recordingsElement) {
+    window.scrollTo({
+      top: recordingsElement.offsetTop - 60,
+      behavior: 'smooth',
+    });
+  }
 };
 
 const Hero = () => {
