@@ -5,7 +5,7 @@ const scrollToContact = (e: any) => {
     const contactElement = document.getElementById("contact");
     if (contactElement) {
       window.scrollTo({
-        top: contactElement.offsetTop - 60,
+        top: contactElement.offsetTop,
         behavior: 'smooth',
       });
     }
@@ -16,7 +16,7 @@ const scrollToContact = (e: any) => {
     const recordingsElement = document.getElementById("recordings");
     if (recordingsElement) {
       window.scrollTo({
-        top: recordingsElement.offsetTop - 60,
+        top: recordingsElement.offsetTop,
         behavior: 'smooth',
       });
     }
