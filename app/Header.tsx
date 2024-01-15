@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
@@ -9,18 +9,20 @@ const navigation = [
     { name: 'Musicians', href: '#' },
     { name: 'Recordings', href: '#contact' },
     { name: 'Contact', href: '#contact' },
-  ]
+  ];
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
-  let lastScrollY = 0;
+  const [isBlurred, setIsBlurred] = useState(false);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      setIsVisible(currentScrollY < lastScrollY || currentScrollY === 0);
-      lastScrollY = currentScrollY;
+      setIsVisible(currentScrollY < lastScrollY.current || currentScrollY === 0);
+      setIsBlurred(currentScrollY > 700);
+      lastScrollY.current = currentScrollY;
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -29,8 +31,9 @@ const Header = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  
-    return <header className={`fixed inset-x-0 top-0 z-50 transition-transform duration-300 ${
+
+  return (
+    <header className={`fixed inset-x-0 top-0 z-50 transition-transform duration-300 ${isBlurred ? "bg-black/50 backdrop-blur" : ""} ${
       isVisible ? 'translate-y-0' : '-translate-y-full'
     }`}>
         <nav className="flex items-center justify-between p-6 lg:px-8 max-w-7xl mx-auto" aria-label="Global">
@@ -91,6 +94,7 @@ const Header = () => {
           </Dialog.Panel>
         </Dialog>
       </header>
+  )
 }
 
 export default Header
