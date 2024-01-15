@@ -5,6 +5,7 @@ import Musicians from "./Musicians";
 import Testimonials from "./Testimonials";
 import Recordings from "./Recordings";
 import Contact from "./Contact";
+import Footer from "./Footer";
 
 const IndexPage = () =>  {
   return (
@@ -16,6 +17,7 @@ const IndexPage = () =>  {
       <Recordings />
       <Testimonials />
       <Contact />
+      <Footer />
     </main>
   )
 }
