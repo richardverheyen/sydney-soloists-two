@@ -1,7 +1,6 @@
 'use client'
 
-import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useEffect } from 'react';
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
@@ -13,21 +12,31 @@ const navigation = [
   ]
 
 const Header = () => {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  let lastScrollY = 0;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setIsVisible(currentScrollY < lastScrollY || currentScrollY === 0);
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   
-    return <header className="fixed inset-x-0 top-0 z-50">
+    return <header className={`fixed inset-x-0 top-0 z-50 transition-transform duration-300 ${
+      isVisible ? 'translate-y-0' : '-translate-y-full'
+    }`}>
         <nav className="flex items-center justify-between p-6 lg:px-8 max-w-7xl mx-auto" aria-label="Global">
           <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Cutshot</span>
-              {/* <Image
-                className="h-8 w-auto"
-                src="/vercel.svg"
-                width={32}
-                height={32}
-                alt="Cutshot Logo"
-                /> */}
-                <p className='font-display'>Sydney Soloists</p>
+            <a href="#" className="font-display -m-1.5 p-1.5">
+              Sydney Soloists
             </a>
           </div>
           <div className="flex lg:hidden">
@@ -52,16 +61,8 @@ const Header = () => {
           <div className="fixed inset-0 z-50" />
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-slate-800 dark:bg-slate-800 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">The Sydney Soloists</span>
-                {/* <Image
-                    className="h-8 w-auto"
-                    src="/logo.png"
-                    width={32}
-                    height={32}
-                    alt="Cutshot Logo"
-                    /> */}
-                    <p className='font-display'>Sydney Soloists</p>
+              <a href="#" className="font-display -m-1.5 p-1.5">
+                Sydney Soloists
               </a>
               <button
                 type="button"
@@ -85,14 +86,6 @@ const Header = () => {
                     </a>
                   ))}
                 </div>
-                {/* <div className="py-6">
-                  <a
-                    href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 hover:underline"
-                  >
-                    Log in
-                  </a>
-                </div> */}
               </div>
             </div>
           </Dialog.Panel>
