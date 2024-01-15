@@ -13,7 +13,7 @@ const links = [
   
   export default function Example() {
     return (
-      <div id="about-us" className="relative isolate overflow-hidden py-24 sm:py-32">
+      <div id="about-us" className="relative isolate overflow-hidden py-24 sm:py-32 mt-[604px] sm:mt-[684px] lg:mt-[716px] bg-black">
         
         <div
           className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"

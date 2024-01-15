@@ -1,6 +1,6 @@
 export default function Example() {
     return (
-      <section className="relative isolate overflow-hidden px-6 py-24 sm:py-32 lg:px-8">
+      <section className="relative isolate overflow-hidden px-6 py-24 sm:py-32 lg:px-8 bg-black">
        <div className="mx-auto max-w-2xl lg:max-w-4xl">
           {/* <img className="mx-auto h-12" src="https://tailwindui.com/img/logos/workcation-logo-indigo-600.svg" alt="" /> */}
           <figure className="mt-10">

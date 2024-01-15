@@ -69,7 +69,7 @@ const persons = [
 
 export default function Musicians() {
   return (
-    <div className="relative overflow-hidden bg-black">
+    <div className="relative overflow-hidden">
       <img
           src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt=""

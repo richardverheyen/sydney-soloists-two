@@ -26,8 +26,11 @@ we still enforce color-scheme: dark, despite the user preference */
   }
   html {
     color-scheme: dark;
-    background-color: black;
   }
+}
+
+html {
+  background-color: black!important;
 }
 
 body {

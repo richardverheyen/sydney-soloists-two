@@ -29,11 +29,11 @@ const Hero = () => {
   let videosrc = "/orchestra-example.mp4";
 
   return (
-    <div className="bg-cream">
-      <div className="relative isolate px-6 pt-14 lg:px-8 overflow-hidden">
+    <div className="fixed top-0 w-full h-full">
+      <div className="relative isolate px-6 pt-[72px] lg:px-8 overflow-hidden">
         <ReactPlayer
           url={videosrc}
-          className="absolute opacity-20 -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 !min-w-full !min-h-full !h-full !w-[400%] desktop:!w-full desktop:!h-[200%] max:!w-[1440px] max:!h-[810px]"
+          className="absolute opacity-50 -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 !min-w-full !min-h-full !h-full !w-[400%] desktop:!w-full desktop:!h-[200%] max:!w-[1440px] max:!h-[810px]"
           light={false}
           muted={true}
           loop={true}
@@ -52,7 +52,7 @@ const Hero = () => {
 
 const HeroLeft = () => {
   return (
-    <section className="mx-auto max-w-4xl py-32 sm:py-48 lg:py-56">
+    <section className="mx-auto max-w-4xl h-[532px] sm:h-[612px] lg:h-[644px] flex justify-center">
       {/* <div className="hidden sm:mb-8 lg:flex">
         <div className="relative rounded-full px-3 py-1 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
           Currently in Pre-Alpha testing phase.{" "}
@@ -62,7 +62,7 @@ const HeroLeft = () => {
           </a>
         </div>
       </div> */}
-      <div className="text-center lg:text-left">
+      <div className="text-center lg:text-left my-auto">
         <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
           The Sydney Soloists
         </h1>
