@@ -1,15 +1,9 @@
 const persons = [
   { 
-    name: 'Andrew Haveron', 
-    firstName: 'Andrew', 
-    instrument: 'Violin' ,
-    image: 'https://www.sydneymozartsociety.com.au/media/42308/5_ss_andrew_haveron.jpg'
-  },
-  { 
-    name: 'Anicka Skalova', 
-    firstName: 'Anicka', 
-    instrument: 'Violin' ,
-    image: 'https://www.sydneysymphony.com/uploads/images/New-Musician-Headshots-230321/_1200x630_crop_center-center_82_none/2023-Anna-Skalova-Listing.jpg?mtime=1679369722'
+    name: 'Frank Celata', 
+    firstName: 'Frank', 
+    instrument: 'Clarinet' ,
+    image: 'https://www.sydneymozartsociety.com.au/media/42298/5_ss_frank_celata.jpg'
   },
   { 
     name: 'Tobias Breider', 
@@ -18,10 +12,28 @@ const persons = [
     image: 'https://www.sydneymozartsociety.com.au/media/42318/5_ss_tobias_brieder.jpg'
   },
   { 
+    name: 'Andrew Haveron', 
+    firstName: 'Andrew', 
+    instrument: 'Violin' ,
+    image: 'https://www.sydneymozartsociety.com.au/media/42308/5_ss_andrew_haveron.jpg'
+  },
+  { 
+    name: 'Christina Leonard', 
+    firstName: 'Christina', 
+    instrument: 'Saxophone' ,
+    image: 'https://www.christinaleonard.com.au/resources/images/christina_06.jpg'
+  },
+  { 
     name: 'Kees Boersma', 
     firstName: 'Kees', 
     instrument: 'Double Bass' ,
     image: 'https://www.sydneysymphony.com/uploads/images/New-Musician-Headshots-230321/_heroSmall/2023-Kees-Boersma-Detail.jpg'
+  },
+  { 
+    name: 'Anicka Skalova', 
+    firstName: 'Anicka', 
+    instrument: 'Violin' ,
+    image: 'https://www.sydneysymphony.com/uploads/images/New-Musician-Headshots-230321/_1200x630_crop_center-center_82_none/2023-Anna-Skalova-Listing.jpg?mtime=1679369722'
   },
   { 
     name: 'Emma Scholl', 
@@ -36,22 +48,10 @@ const persons = [
     image: 'https://www.sydneysymphony.com/uploads/images/New-Musician-Headshots-230321/_1200x630_crop_center-center_82_none/2023-Diana-Doherty-Listing.jpg?mtime=1679369734'
   },
   { 
-    name: 'Frank Celata', 
-    firstName: 'Frank', 
-    instrument: 'Clarinet' ,
-    image: 'https://www.sydneymozartsociety.com.au/media/42298/5_ss_frank_celata.jpg'
-  },
-  { 
     name: 'Matthew Wilkie', 
     firstName: 'Matthew', 
     instrument: 'Bassoon' ,
     image: 'https://www.sydneysymphony.com/uploads/images/New-Musician-Headshots-230321/_1200x630_crop_center-center_82_none/2023-Matthew-Wilkie-Listing.jpg?mtime=1679369759'
-  },
-  { 
-    name: 'Christina Leonard', 
-    firstName: 'Christina', 
-    instrument: 'Saxophone' ,
-    image: 'https://www.christinaleonard.com.au/resources/images/christina_06.jpg'
   },
   { 
     name: 'Sam Jacobs', 

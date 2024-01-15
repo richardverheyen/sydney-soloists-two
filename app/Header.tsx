@@ -20,7 +20,7 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      setIsVisible(currentScrollY < lastScrollY.current || currentScrollY === 0);
+      setIsVisible(currentScrollY < lastScrollY.current || currentScrollY < 1);
       setIsBlurred(currentScrollY > 700);
       lastScrollY.current = currentScrollY;
     };

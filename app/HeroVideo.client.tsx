@@ -23,17 +23,15 @@ const ReactPlayerComponent = () => {
   }, []);
 
   return (
-    showPlayer && (
       <ReactPlayer
         url={videosrc}
-        className="absolute opacity-50 -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 !min-w-full !min-h-full !h-full !w-[400%] desktop:!w-full desktop:!h-[200%] max:!w-[1440px] max:!h-[810px]"
+        className={`${showPlayer ? "" : "opacity-0"} absolute opacity-50 -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 !min-w-full !min-h-full !h-full !w-[400%] desktop:!w-full desktop:!h-[200%] max:!w-[1440px] max:!h-[810px]`}
         light={false}
         muted={true}
         loop={true}
         playing={true}
         playsinline={true}
       />
-    )
   );
 };
 
